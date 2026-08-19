@@ -1,0 +1,61 @@
+/* --- DASHBOARD LAYOUT --- */
+.dashboard-layout {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  width: 100%;
+}
+
+.dashboard-content {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 4rem;
+}
+
+.top-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.macros-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.summary-section {
+  width: 100%;
+}
+
+.bottom-grid {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 2rem;
+}
+
+.left-panel {
+  width: 100%;
+}
+
+.right-panel {
+  width: 100%;
+}
+
+/* --- RESPONSIVE MEDIA QUERIES --- */
+@media (max-width: 992px) {
+  .bottom-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-layout {
+    padding: 0 1rem;
+  }
+  
+  .macros-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}

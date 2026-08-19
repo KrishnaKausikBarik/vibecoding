@@ -1,0 +1,85 @@
+/* --- CALORIE BUDGET --- */
+.calorie-budget {
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  margin-bottom: 2rem;
+}
+
+.budget-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.budget-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.budget-icon {
+  color: var(--primary);
+}
+
+.budget-title h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.budget-numbers .current {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.budget-numbers .target {
+  font-size: 1rem;
+  color: var(--muted);
+}
+
+.progress-container {
+  margin-bottom: 1rem;
+}
+
+.progress-track {
+  height: 12px;
+  background: #e5e7eb;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.5s ease-out, background-color 0.3s ease;
+}
+
+.progress-fill.success {
+  background: var(--primary);
+}
+
+.progress-fill.danger {
+  background: var(--danger);
+}
+
+.status-text {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.status-text.remaining {
+  color: var(--muted);
+}
+
+.status-text.over {
+  color: var(--danger);
+}
+
+@media (max-width: 600px) {
+  .budget-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}

@@ -1,0 +1,54 @@
+/* --- IMAGE SCANNER --- */
+.image-scanner {
+  padding: 1.5rem;
+  border: 1px dashed var(--border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+}
+
+.scanner-icon {
+  color: var(--blue);
+  background: #eff6ff;
+  padding: 12px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scanner-content h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.scanner-content p {
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+.scan-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--text);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-top: 8px;
+  transition: background-color 0.2s;
+}
+
+.scan-btn:hover:not(:disabled) {
+  background: #374151;
+}
+
+.scan-btn:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}

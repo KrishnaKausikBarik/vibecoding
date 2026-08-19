@@ -1,0 +1,42 @@
+/* --- FITNESS GOAL TOGGLE --- */
+.goal-toggle-container {
+  margin-bottom: 2rem;
+}
+
+.goal-toggle-container h3 {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  color: var(--text);
+}
+
+.segmented-control {
+  display: flex;
+  background: #e5e7eb;
+  padding: 4px;
+  border-radius: 12px;
+  max-width: 400px;
+}
+
+.segment {
+  flex: 1;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--muted);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.segment.active {
+  background: var(--card);
+  color: var(--text);
+  box-shadow: var(--shadow-sm);
+}
+
+@media (max-width: 600px) {
+  .segmented-control {
+    max-width: 100%;
+    width: 100%;
+  }
+}
