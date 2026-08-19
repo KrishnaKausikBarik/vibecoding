@@ -23,31 +23,31 @@ import {
 
 const GlobalStyle = () => (
   <style>{`
-    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
     .ct-root {
-      --bg: #F6F7F2;
+      --bg: #F8F9FA;
       --paper: #FFFFFF;
-      --ink: #16241C;
-      --muted: #6B7A70;
-      --border: #E5E8E0;
-      --border-soft: #EEF0EA;
+      --ink: #111827;
+      --muted: #6B7280;
+      --border: #E5E7EB;
+      --border-soft: #F3F4F6;
 
-      --cal-1: #059669;
-      --cal-2: #0D9488;
-      --over: #DC2626;
+      --cal-1: #10B981;
+      --cal-2: #059669;
+      --over: #EF4444;
       --over-soft: #FEE2E2;
 
       --protein: #F59E0B;
       --protein-soft: #FEF3E2;
-      --carbs: #2563EB;
-      --carbs-soft: #EAF1FE;
+      --carbs: #3B82F6;
+      --carbs-soft: #DBEAFE;
       --fat: #8B5CF6;
-      --fat-soft: #F3EEFE;
+      --fat-soft: #EDE9FE;
 
       background: var(--bg);
       color: var(--ink);
-      font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+      font-family: 'Poppins', sans-serif;
       min-height: 100%;
       -webkit-font-smoothing: antialiased;
     }
@@ -55,14 +55,16 @@ const GlobalStyle = () => (
     .ct-root * { box-sizing: border-box; }
 
     .ct-display {
-      font-family: 'Space Grotesk', 'Inter', sans-serif;
-      letter-spacing: -0.02em;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      letter-spacing: -0.01em;
     }
 
     .ct-card {
       background: var(--paper);
-      border: 1px solid var(--border);
-      border-radius: 20px;
+      border: 1px solid var(--border-soft);
+      border-radius: 24px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
     }
 
     .ct-card-hover { transition: box-shadow 220ms ease, transform 220ms ease, border-color 220ms ease; }
@@ -77,13 +79,10 @@ const GlobalStyle = () => (
       position: relative;
       height: 22px;
       border-radius: 999px;
-      background: repeating-linear-gradient(
-        90deg,
-        #EEF1EA 0px, #EEF1EA 6px,
-        #E7EAE1 6px, #E7EAE1 7px
-      );
+      background: #F3F4F6;
       overflow: hidden;
-      border: 1px solid var(--border);
+      border: 1px solid var(--border-soft);
+      box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
     }
     .ct-gauge-fill {
       position: absolute;
@@ -92,6 +91,7 @@ const GlobalStyle = () => (
       border-radius: 999px;
       background: linear-gradient(90deg, var(--cal-1), var(--cal-2));
       transition: width 700ms cubic-bezier(.22,1,.36,1), background 400ms ease;
+      box-shadow: inset 0 -2px 4px rgba(0,0,0,0.1);
     }
     .ct-gauge-fill.over { background: linear-gradient(90deg, #EF4444, var(--over)); }
     .ct-gauge-fill::after {
@@ -99,8 +99,8 @@ const GlobalStyle = () => (
       position: absolute;
       inset: 0;
       background: repeating-linear-gradient(
-        90deg, rgba(255,255,255,0.35) 0px, rgba(255,255,255,0.35) 1px,
-        transparent 1px, transparent 18px
+        90deg, rgba(255,255,255,0.2) 0px, rgba(255,255,255,0.2) 1px,
+        transparent 1px, transparent 20px
       );
     }
 
@@ -131,11 +131,11 @@ const GlobalStyle = () => (
     }
     .ct-scan-sweep {
       position: absolute; left: 0; right: 0; height: 40%;
-      background: linear-gradient(180deg, transparent, rgba(5,150,105,0.18), transparent);
+      background: linear-gradient(180deg, transparent, rgba(16,185,129,0.18), transparent);
       animation: ct-scan-sweep 1.1s ease-in-out infinite;
     }
 
-    .ct-ring-track { stroke: #EEF0EA; }
+    .ct-ring-track { stroke: #F3F4F6; }
 
     .ct-focus:focus-visible {
       outline: 2px solid var(--cal-1);
@@ -143,16 +143,17 @@ const GlobalStyle = () => (
     }
 
     .ct-btn-primary {
-      background: var(--ink);
+      background: linear-gradient(135deg, #111827 0%, #374151 100%);
       color: #fff;
       transition: transform 160ms ease, background 160ms ease, box-shadow 160ms ease;
+      box-shadow: 0 4px 12px rgba(17, 24, 39, 0.15);
     }
-    .ct-btn-primary:hover:not(:disabled) { background: #223328; box-shadow: 0 8px 20px -8px rgba(22,36,28,0.45); }
+    .ct-btn-primary:hover:not(:disabled) { box-shadow: 0 8px 20px -6px rgba(17, 24, 39, 0.3); }
     .ct-btn-primary:active:not(:disabled) { transform: scale(0.98); }
-    .ct-btn-primary:disabled { background: #C9CEC4; cursor: not-allowed; }
+    .ct-btn-primary:disabled { background: #E5E7EB; color: #9CA3AF; cursor: not-allowed; box-shadow: none; }
 
     .ct-input {
-      background: #FBFCF9;
+      background: #FFFFFF;
       border: 1px solid var(--border);
       transition: border-color 160ms ease, background 160ms ease, box-shadow 160ms ease;
     }
